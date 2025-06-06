@@ -6,6 +6,5 @@
     flex: 1;
     margin: 5px;
     background-color: black;
-    height: 80px;
-    width: 80px;
+    min-height: 60px;
 }
