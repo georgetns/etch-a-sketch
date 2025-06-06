@@ -1,11 +1,10 @@
 const body = document.querySelector("body");
-let i = 0;
 
 // Create empty container with specific class
-let createContainerRow = () => {
+const createContainerRow = (index) => {
     const container = document.createElement("div");
     container.classList.add("container");
-    container.classList.add(`number${i}`);
+    container.classList.add(`number${index}`);
     i++;
     return container;
 };
@@ -21,15 +20,16 @@ let addDivsToContainer = (container, numberOfColumns) => {
 };
 
 //  Construct container and append to body
-let addContainerRow = (numberOfColumns) => {
-    const container = createContainerRow();
+let addContainerRow = (index, numberOfColumns) => {
+    const container = createContainerRow(index);
     addDivsToContainer(container, numberOfColumns);
     body.appendChild(container);
 };
 
+// Create canvas NxN size
 let createCanvas = (rowsLength) => {
     for (j = 0; j < rowsLength; j++) {
-        addContainerRow(rowsLength);
+        addContainerRow(j, rowsLength);
     }
 };
 
