@@ -2,15 +2,45 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#grid-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .container {
     display: flex;
+    flex: 1;
 }
 
-.gridElement {
+.grid-element {
     flex: 1;
-    margin: 5px;
+    border: 1px solid white;
+    background-color: bisque;
+}
+
+.background-on {
     background-color: black;
-    min-height: 60px;
+}
+
+#btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    color: white;
+    background: linear-gradient(to bottom right, #0077ff, #00aaff);
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+    margin: 10px auto;
 }
